@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Short URL Service</title>
+    <!--Връзка към CSS файл--->
+    <link rel="stylesheet" href="style.css">
+
+    
+  </head>
+  <body>
+    <div class="header">
+      <h1>Create Short URL</h1>
+    </div>
+
+    <div class="form">
+      <div class="form-element">
+        <label for="longurl">Enter URL</label>
+        <input type="text" id="longurl" placeholder="http://example.com" />
+      </div>
+      <div class="form-element">
+        <label for="length">URL Length (5-15 characters)</label>
+        <input type="number" id="length" min="5" max="15" value="10" />
+      </div>
+      <div class="form-element">
+        <label for="max-uses">Maximum Uses (default 5)</label>
+        <input type="number" id="max-uses" min="1" value="5" />
+      </div>
+      <div class="form-element">
+        <button id="create-short-url">Create Short URL</button>
+      </div>
+      <div class="result">
+        <a href="#" id="short-url" target="_blank"></a>
+      </div>
+    </div>
+
+    <div class="list">
+      <h2>Generated Short URLs</h2>
+      <table id="list_urls">
+        <thead>
+          <tr>
+            <th>Long URL</th>
+            <th>Short URL</th>
+            <th>Usage Count</th>
+            <th>Expiration Time</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- JavaScript код в <script> -->
+      <script src="script.js"></script>
+  </body>
+</html>
